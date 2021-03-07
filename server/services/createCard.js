@@ -11,7 +11,7 @@ const { errors: { NotAllowedError }, utils: { validate } } = require('../shared'
  * 
  * @throws {NotAllowedError} Throws an error if a Card with the same exact information currently exists on the database.
  */
-const createCard = async ({ title, description }) => {
+module.exports = async ({ title, description }) => {
   validate.string(title, 'title');
   validate.string(description, 'description');
 
@@ -20,5 +20,3 @@ const createCard = async ({ title, description }) => {
 
   await Card.create({ title, description, created: new Date() });
 }
-
-module.exports = { createCard };

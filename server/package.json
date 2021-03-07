@@ -9,6 +9,11 @@
     "start": "node index.js",
     "watch": "npx nodemon index.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test:unit"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

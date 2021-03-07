@@ -1,3 +1,3 @@
-const { Card } = require('./Card');
-
-module.exports = { Card };
+module.exports = {
+    Card: require('./Card')
+};
