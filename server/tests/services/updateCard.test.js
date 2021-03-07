@@ -3,9 +3,9 @@ const { MONGODB_URL_TEST } = process.env;
 
 const { expect } = require('chai');
 const { random, floor } = Math;
-const { mongoose, models: { Card } } = require('../../db');
-const { errors: { NotFoundError } } = require('../shared');
-const { updateCard } = require('../services');
+const { mongoose, models: { Card } } = require('../../../db');
+const { errors: { NotFoundError } } = require('../../shared');
+const { updateCard } = require('../../services');
 
 
 describe('updateCard should', () => {
@@ -33,6 +33,22 @@ describe('updateCard should', () => {
         expect(card).to.exist;
         expect(card.title).to.equal('updated-title');
         expect(card.description).to.equal('updated-description');
+        expect(card.created).to.exist;
+        expect(card.created).to.be.instanceOf(Date);
+        expect(card.updated).to.exist;
+        expect(card.updated).to.be.instanceOf(Date);
+        expect(card._id).to.exist;
+        expect(card._id.toString()).to.equal(cardId);
+    });
+
+    it('succeed to update an existing Card even if no data values are provided', async () => {
+        await updateCard({ cardId });
+
+        const card = await Card.findById(cardId);
+
+        expect(card).to.exist;
+        expect(card.title).to.equal(title);
+        expect(card.description).to.equal(description);
         expect(card.created).to.exist;
         expect(card.created).to.be.instanceOf(Date);
         expect(card.updated).to.exist;

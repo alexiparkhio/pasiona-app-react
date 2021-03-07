@@ -1,5 +1,5 @@
 const { deleteCard } = require('../../services');
-const { handlers: { ErrorHandler } } = require('../../shared');
+const ErrorHandler = require('./ErrorHandler');
 
 module.exports = async (req, res) => {
     try {
