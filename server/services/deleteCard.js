@@ -10,7 +10,7 @@ const { errors: { NotFoundError }, utils: { validate } } = require('../shared');
  * 
  * @throws {NotFoundError} Throws an error if the Card does not exist on the database.
  */
-const deleteCard = async ({ cardId }) => {
+module.exports = async ({ cardId }) => {
   validate.string(cardId, 'cardId');
 
   const card = await Card.findById(cardId);
@@ -18,5 +18,3 @@ const deleteCard = async ({ cardId }) => {
 
   await Card.findByIdAndRemove(cardId);
 }
-
-module.exports = { deleteCard };

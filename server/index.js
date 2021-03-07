@@ -8,7 +8,7 @@ const express = require('express');
 const pino = require('pino-http');
 const cors = require('cors');
 
-mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
   .then(() => {
     const app = express();
 
