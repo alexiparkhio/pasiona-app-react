@@ -12,15 +12,13 @@ const { errors: { NotFoundError }, utils: { validate } } = require('../shared');
  * 
  * @throws {NotFoundError} Throws an error if the Card does not exist on the database.
  */
-const updateCard = async ({ cardId, title, description }) => {
+module.exports = async ({ cardId, data = {} }) => {
   validate.string(cardId, 'cardId');
-  validate.string(title, 'title');
-  validate.string(description, 'description');
+  data.title && validate.string(data.title, 'title');
+  data.description && validate.string(data.description, 'description');
 
   const card = await Card.findById(cardId);
   if (!card) throw new NotFoundError(`Card with id ${cardId} not found`);
 
-  await Card.findByIdAndUpdate(cardId, { title, description, updated: new Date() });
+  await Card.findByIdAndUpdate(cardId, { ...data, updated: new Date() });
 }
-
-module.exports = { updateCard };
