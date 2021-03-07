@@ -3,8 +3,8 @@
  */
 module.exports = class NotAllowedError extends Error {
   constructor(...args) {
-      super(...args)
+    super(...args)
 
-      this.name = NotAllowedError.name
+    this.name = NotAllowedError.name
   }
 }

@@ -3,9 +3,9 @@ const { MONGODB_URL_TEST } = process.env;
 
 const { expect } = require('chai');
 const { random, floor } = Math;
-const { mongoose, models: { Card } } = require('../../db');
-const { errors: { NotAllowedError } } = require('../shared');
-const { createCard } = require('../services');
+const { mongoose, models: { Card } } = require('../../../db');
+const { errors: { NotAllowedError } } = require('../../shared');
+const { createCard } = require('../../services');
 
 
 describe('createCard should', () => {

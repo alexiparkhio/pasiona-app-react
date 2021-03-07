@@ -3,8 +3,8 @@
  */
 module.exports = class NotFoundError extends Error {
   constructor(...args) {
-      super(...args)
+    super(...args)
 
-      this.name = NotFoundError.name
+    this.name = NotFoundError.name
   }
 }

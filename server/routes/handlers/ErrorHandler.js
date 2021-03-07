@@ -1,4 +1,4 @@
-const { NotAllowedError, NotFoundError, ContentError } = require('../errors');
+const { NotAllowedError, NotFoundError, ContentError } = require('../../shared/errors');
 
 module.exports = (error, res) => {
     let status = 400

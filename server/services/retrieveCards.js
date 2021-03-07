@@ -9,5 +9,5 @@ const { utils: { sanitize } } = require('../shared');
 module.exports = async () => {
   const cards = await Card.find().lean();
 
-  return cards ? sanitize(cards) : [];
+  return cards.length ? sanitize(cards) : [];
 }
