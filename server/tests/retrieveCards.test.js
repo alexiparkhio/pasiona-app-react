@@ -6,7 +6,7 @@ const { mongoose, models: { Card } } = require('../../db');
 const { retrieveCards } = require('../services');
 
 
-describe('createCard should', () => {
+describe('retrieveCards should', () => {
     before(async () => {
         await mongoose.connect(MONGODB_URL_TEST, { useNewUrlParser: true, useUnifiedTopology: true });
         await Card.deleteMany();
