@@ -13,7 +13,9 @@ mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true,
     const app = express();
 
     /* Middlewares */
-    app.use(pino());
+    app.use(pino({
+      prettyPrint: { colorize: true }
+    }));
     app.use(cors());
 
     /* API routing directory */
