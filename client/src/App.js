@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Container } from "./components";
+import { NewCard, Card, Container } from "./components";
 import { connect } from "react-redux";
 import { cardsOperations } from "./redux/ducks/cards";
 
@@ -7,7 +7,7 @@ const {
   getCardsData,
   postCardData,
   patchCardData,
-  deleteCardData,
+  deleteCardData
 } = cardsOperations;
 
 const App = ({
@@ -21,12 +21,7 @@ const App = ({
     <>
       <Container>
         <Card title="Example title" description="lorem ipsum dude" />
-        <Card title="Example title" description="lorem ipsum dude" />
-        <Card title="Example title" description="lorem ipsum dude" />
-        <Card title="Example title" description="lorem ipsum dude" />
-        <Card title="Example title" description="lorem ipsum dude" />
-        <Card title="Example title" description="lorem ipsum dude" />
-        <Card title="Example title" description="lorem ipsum dude" />
+        <NewCard />
       </Container>
     </>
   );
