@@ -26,7 +26,7 @@ const NewCard = () => {
                         </div>
                         <div className="card-footer d-flex justify-content-between">
                             <Button variant="danger" onClick={inputSetter}>Back</Button>
-                            <Button type="submit" variant="success" onClick={inputSetter}>Submit</Button>
+                            <Button type="submit" variant="success">Submit</Button>
                         </div>
                     </div>
                 </>)}

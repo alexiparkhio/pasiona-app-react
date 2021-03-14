@@ -12,10 +12,10 @@ const Card = ({ title, description }) => {
       <div className="col-sm-4">
         <div className="Card card">
           <h3 className="card-title p-3 mb-2 bg-info text-white">
-            {!newInput ? title : <input type="text" className="form-control" placeholder="Type the title here" />}
+            {!newInput ? title : <input type="text" className="form-control" placeholder="Type the title here" defaultValue={title} />}
           </h3>
           <div className="card-body">
-            {!newInput ? <p className="card-text">{description}</p> : <textarea className="form-control" placeholder="What's on your mind?" />}
+            {!newInput ? <p className="card-text">{description}</p> : <textarea className="form-control" placeholder="What's on your mind?" defaultValue={description} />}
           </div>
           <div className="card-footer d-flex justify-content-end">
             {!newInput ? <Button variant="danger">Delete</Button> : <Button variant="danger" onClick={() => inputSetter(false)}>Back</Button>}
