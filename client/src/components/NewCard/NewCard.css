@@ -1,0 +1,8 @@
+.NewCard {
+  min-height: 250px;
+  margin: 0.5em;
+}
+
+.NewCard-plus {
+  width: 100px;
+}

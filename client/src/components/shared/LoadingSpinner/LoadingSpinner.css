@@ -1,0 +1,8 @@
+div.LoadingSpinner-spinner {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+p.LoadingSpinner-text {
+  line-height: 3em;
+}

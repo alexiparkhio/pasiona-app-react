@@ -1,8 +1,11 @@
-import { Button, Container } from "./shared";
+import { Button, Container, LoadingSpinner } from "./shared";
 import Card from './Card/Card';
+import NewCard from './NewCard/NewCard';
 
-export { 
+export {
     Card,
     Button,
-    Container
+    Container,
+    NewCard,
+    LoadingSpinner
 };
