@@ -12,7 +12,8 @@ export const postCardData = body => async (dispatch) => {
 
 	try {
 		await createCard(body);
-		dispatch(actions.cardsPostSuccess());
+		dispatch(actions.cardsPostSuccess())
+		dispatch(getCardsData());
 	} catch (error) {
 		dispatch(actions.cardsPostError(error));
 	}
@@ -35,6 +36,7 @@ export const patchCardData = (cardId, body) => async (dispatch) => {
 	try {
 		await updateCard(cardId, body);
 		dispatch(actions.cardsPatchSuccess());
+		dispatch(getCardsData());
 	} catch (error) {
 		dispatch(actions.cardsPatchError(error));
 	}
@@ -46,6 +48,7 @@ export const deleteCardData = cardId => async (dispatch) => {
 	try {
 		await deleteCard(cardId);
 		dispatch(actions.cardsDeleteSuccess());
+		dispatch(getCardsData());
 	} catch (error) {
 		dispatch(actions.cardsDeleteError(error));
 	}
