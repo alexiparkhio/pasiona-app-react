@@ -2,7 +2,7 @@ require('dotenv').config();
 const { PORT = 8080, NODE_ENV = 'development', HOST, MONGODB_URL } = process.env;
 const { name, version } = require('./package.json');
 const { router } = require('./routes');
-const { mongoose } = require('../db');
+const { mongoose } = require('./db');
 
 const express = require('express');
 const pino = require('pino-http');

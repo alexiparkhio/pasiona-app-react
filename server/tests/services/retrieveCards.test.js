@@ -2,7 +2,7 @@ require('dotenv').config();
 const { MONGODB_URL_TEST } = process.env;
 
 const { expect } = require('chai');
-const { mongoose, models: { Card } } = require('../../../db');
+const { mongoose, models: { Card } } = require('../../db');
 const { retrieveCards } = require('../../services');
 
 

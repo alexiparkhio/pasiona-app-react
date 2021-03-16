@@ -3,7 +3,7 @@ const { MONGODB_URL_TEST } = process.env;
 
 const { expect } = require('chai');
 const { random, floor } = Math;
-const { mongoose, models: { Card } } = require('../../../db');
+const { mongoose, models: { Card } } = require('../../db');
 const { errors: { NotFoundError } } = require('../../shared');
 const { updateCard } = require('../../services');
 

@@ -1,4 +1,4 @@
-const { models: { Card } } = require('../../db');
+const { models: { Card } } = require('../db');
 const { errors: { NotAllowedError }, utils: { validate } } = require('../shared');
 
 /**

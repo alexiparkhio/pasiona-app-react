@@ -1,4 +1,4 @@
-const { models: { Card } } = require('../../db');
+const { models: { Card } } = require('../db');
 const { utils: { sanitize } } = require('../shared');
 
 /**
