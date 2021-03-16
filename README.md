@@ -1,6 +1,9 @@
 # Pasiona React App
 This is fullstack App I built for Pasiona. I would like to thank to the company beforehand for the interest they deposited in my skills.
 
+## Demo
+Demo of the app available at: https://pasiona-react-app.surge.sh/
+
 The app simply features a basic CRUD structure with cards. You can display them with a title and a description.
 
 ## Installation
